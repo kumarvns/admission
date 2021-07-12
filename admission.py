@@ -32,7 +32,7 @@ chrome_options.add_argument("--no-sandbox")
 
 while True:
     try:
-        driver = webdriver.Chrome(executable_path="./chromedriver.exe", options=chrome_options)
+        driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 
         driver.get("https://www.allduniv.ac.in/admissions.php")
 
