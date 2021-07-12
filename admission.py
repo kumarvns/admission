@@ -3,6 +3,7 @@ from telethon import TelegramClient
 from selenium import webdriver
 import time
 import os
+from datetime import datetime
 
 api_id = os.environ.get("API_KEY")
 api_hash = os.environ.get("API_HASH")
@@ -39,7 +40,8 @@ while True:
         capture = driver.find_element_by_xpath("/html/body/div[4]/div/div/div/div/div/h3").text
         if capture != "Admissions 2021 to be announced soon.":
             message(f"`{capture}`")
-
+           
+        print(datetime.now().hour)
         driver.close()
         time.sleep(9000)
 
