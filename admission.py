@@ -46,4 +46,5 @@ while True:
         time.sleep(9000)
 
     except:
-        pass
+        capture = "An error occured!!"
+        message(f"`{capture}`")
