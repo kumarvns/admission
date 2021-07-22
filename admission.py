@@ -48,3 +48,4 @@ while True:
     except:
         capture = "An error occured!!"
         message(f"`{capture}`")
+        time.sleep(3600)
